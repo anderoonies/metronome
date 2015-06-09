@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tIK-H7-Ua9" defaultGlanceController="jpo-sG-LVQ">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="lLk-OJ-ckc">
+            <objects>
+                <controller id="tIK-H7-Ua9" customClass="InterfaceController" customModule="Metronome_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="0.25" alignment="left" id="Lu8-SY-Mfs">
+                            <items>
+                                <label width="1" height="1" alignment="left" text="Label" textAlignment="center" id="LPe-ow-PQG">
+                                    <fontDescription key="font" type="system" pointSize="32"/>
+                                </label>
+                            </items>
+                        </group>
+                        <slider width="1" height="0.25" alignment="left" continuous="YES" value="60" minimum="40" maximum="180" steps="140" id="HEa-G1-gDI">
+                            <connections>
+                                <action selector="sliderAction:" destination="tIK-H7-Ua9" id="5GD-PV-mA2"/>
+                            </connections>
+                        </slider>
+                        <button width="1" height="0.5" alignment="left" title="Start" id="dPc-Jr-tB1">
+                            <connections>
+                                <action selector="startStopButtonPressed" destination="tIK-H7-Ua9" id="KYo-yT-HYX"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="startStopButton" destination="dPc-Jr-tB1" id="vh4-tX-XV8"/>
+                        <outlet property="tempoLabel" destination="LPe-ow-PQG" id="aDC-AN-msd"/>
+                        <outlet property="tempoSlider" destination="HEa-G1-gDI" id="sa0-T8-qFu"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="235" y="347"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="Dqp-Jz-gwS">
+            <objects>
+                <glanceController spacing="0.0" id="jpo-sG-LVQ" customClass="GlanceController" customModule="Metronome_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" id="fEH-Ky-5zY"/>
+                        <group alignment="left" id="yae-AE-4dv"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="235" y="672"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="i66-bL-AW0">
+            <objects>
+                <notificationController id="9FE-A1-mlv">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="tP6-Wm-0DC"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="w3q-pc-MIv"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="tP6-Wm-0DC" id="vGB-vQ-E3d"/>
+                        <segue destination="djA-yk-UEv" kind="relationship" relationship="dynamicNotificationInterface" id="2E8-qU-psB"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="235" y="1001"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="etq-QL-ctd">
+            <objects>
+                <controller id="djA-yk-UEv" customClass="NotificationController" customModule="Metronome_WatchKit_App" customModuleProvider="target"/>
+            </objects>
+            <point key="canvasLocation" x="553" y="1001"/>
+        </scene>
+    </scenes>
+</document>
