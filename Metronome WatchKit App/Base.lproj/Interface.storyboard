@@ -17,7 +17,7 @@
                                 </label>
                             </items>
                         </group>
-                        <slider width="1" height="0.25" alignment="left" continuous="YES" value="60" minimum="40" maximum="180" steps="140" id="HEa-G1-gDI">
+                        <slider width="1" height="0.25" alignment="left" continuous="YES" value="100" minimum="40" maximum="180" steps="140" id="HEa-G1-gDI">
                             <connections>
                                 <action selector="sliderAction:" destination="tIK-H7-Ua9" id="5GD-PV-mA2"/>
                             </connections>

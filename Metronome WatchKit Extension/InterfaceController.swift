@@ -69,7 +69,6 @@ class InterfaceController: WKInterfaceController {
     }
     
     func tap() {
-        print("hit! \(spb)")
         WKInterfaceDevice.currentDevice().playHaptic(WKHapticType.Click)
     }
     
