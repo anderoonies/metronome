@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8121.17" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tIK-H7-Ua9" defaultGlanceController="jpo-sG-LVQ">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D131" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tIK-H7-Ua9">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8066.14"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -17,7 +17,7 @@
                                 </label>
                             </items>
                         </group>
-                        <slider width="1" height="0.25" alignment="left" continuous="YES" value="100" minimum="40" maximum="180" steps="140" id="HEa-G1-gDI">
+                        <slider width="1" height="0.25" alignment="left" continuous="YES" value="100" minimum="40" maximum="160" steps="120" id="HEa-G1-gDI">
                             <connections>
                                 <action selector="sliderAction:" destination="tIK-H7-Ua9" id="5GD-PV-mA2"/>
                             </connections>

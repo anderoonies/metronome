@@ -17,7 +17,7 @@ class InterfaceController: WKInterfaceController {
     @IBOutlet var tempoSlider: WKInterfaceSlider!
     @IBOutlet var startStopButton: WKInterfaceButton!
     
-    var tempo = 60 // bpm
+    var tempo = 100 // bpm
     var spb :NSTimeInterval = 1 // seconds per beat
     var timer: NSTimer?
     var isOn :Bool?
@@ -58,6 +58,10 @@ class InterfaceController: WKInterfaceController {
     
     func updateLabel() {
         tempoLabel.setText(String(tempo))
+        WKInterfaceController.openParentApplication(["tempo": tempo],
+            reply: {(reply, error) -> Void in
+                print("Reply to openParentApplication received from iPhone app")
+        })
     }
     
     func updateTimer() {
